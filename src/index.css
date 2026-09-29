@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HOSTEL HIVE — Modern Academic Design System
+   Deep navy + warm amber. Serif headings, sans body. All HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 222 45% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 45% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 45% 12%;
+
+    --primary: 222 47% 16%;
+    --primary-foreground: 40 33% 97%;
+    --primary-glow: 222 47% 28%;
+
+    --secondary: 40 30% 92%;
+    --secondary-foreground: 222 45% 12%;
+
+    --muted: 40 20% 94%;
+    --muted-foreground: 222 15% 42%;
+
+    --accent: 35 85% 55%;
+    --accent-foreground: 222 45% 12%;
+    --accent-soft: 35 85% 92%;
+
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 40 33% 97%;
+
+    --success: 145 55% 38%;
+    --success-foreground: 40 33% 97%;
+
+    --warning: 35 90% 50%;
+    --warning-foreground: 222 45% 12%;
+
+    --border: 40 15% 86%;
+    --input: 40 15% 86%;
+    --ring: 35 85% 55%;
+
+    --radius: 0.625rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(222 47% 16%) 0%, hsl(222 47% 22%) 60%, hsl(35 85% 35%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(35 85% 55%), hsl(28 90% 50%));
+    --gradient-subtle: linear-gradient(180deg, hsl(40 33% 97%) 0%, hsl(40 30% 94%) 100%);
+
+    --shadow-elegant: 0 10px 40px -12px hsl(222 47% 16% / 0.25);
+    --shadow-card: 0 1px 3px hsl(222 47% 16% / 0.06), 0 4px 12px hsl(222 47% 16% / 0.04);
+    --shadow-glow: 0 0 30px hsl(35 85% 55% / 0.35);
+
+    --sidebar-background: 222 47% 14%;
+    --sidebar-foreground: 40 33% 92%;
+    --sidebar-primary: 35 85% 55%;
+    --sidebar-primary-foreground: 222 45% 12%;
+    --sidebar-accent: 222 40% 22%;
+    --sidebar-accent-foreground: 40 33% 97%;
+    --sidebar-border: 222 35% 22%;
+    --sidebar-ring: 35 85% 55%;
+  }
+
+  .dark {
+    --background: 222 45% 8%;
+    --foreground: 40 33% 95%;
+    --card: 222 45% 11%;
+    --card-foreground: 40 33% 95%;
+    --popover: 222 45% 11%;
+    --popover-foreground: 40 33% 95%;
+    --primary: 35 85% 55%;
+    --primary-foreground: 222 45% 8%;
+    --primary-glow: 35 85% 65%;
+    --secondary: 222 35% 18%;
+    --secondary-foreground: 40 33% 95%;
+    --muted: 222 30% 16%;
+    --muted-foreground: 40 15% 70%;
+    --accent: 35 85% 55%;
+    --accent-foreground: 222 45% 8%;
+    --accent-soft: 222 35% 20%;
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 40 33% 95%;
+    --border: 222 30% 20%;
+    --input: 222 30% 20%;
+    --ring: 35 85% 55%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Fraunces', Georgia, serif;
+    font-feature-settings: "ss01", "ss02";
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .bg-hero { background: var(--gradient-hero); }
+  .bg-accent-gradient { background: var(--gradient-accent); }
+  .bg-subtle { background: var(--gradient-subtle); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+}
